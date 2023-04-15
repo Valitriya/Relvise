@@ -40,6 +40,7 @@
         margin: -111px 0px 0px 0px;
     }
 }
+
 .main-block {
     position: relative;
     &__wrapper {
@@ -101,16 +102,8 @@
  }
 
  .services {
-    &__wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-        margin: 0px -15px -30px;
-    }
     &__column{
-        padding: 15px;
         flex: 0 1 33.3333%;
-        margin: 0px 0px 30px 0px;
     }
     &__item{
         height: 100%;
@@ -146,10 +139,43 @@
         transition: 0.6s all;
         fill:#fff;
     }
-
  }
 
+.header-block{
+    text-align: center;
+    letter-spacing: 0.2px;
+    &__title{
+        font-size: 40px;
+        line-height: 140%;
+        font-weight: 700;
+        &:not(:last-child){
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    &__sub-title{
+        color: $text-color;
+    }
+}
+.advantages {
+    padding: 80px 0;
+    &__header {
+        margin: 0px 0px 50px 0px;
+    }
+    &__wrapper{
+        display: flex;
+        margin: 0px -15px;
+    }
+    &__column{
+        margin: 0px 15px;
+        flex: 0 1 25%;
+    }
+    &__item{
+        background-color: #fff;
+        padding: 30px 40px;
+        text-align: center;
 
+    }
+}
 
 
 
@@ -185,6 +211,12 @@
     .services {
         &__column {
             flex: 0 1 50%;
+            &:not(:last-child){
+                margin: 0px 0px 30px 0px;
+            }
+            &:last-child{
+                flex: 1 1 100%;
+            }
         }
     }
 }
@@ -256,6 +288,18 @@
     }
 }
 
+@media (min-width: 670px){
+    .services{
+        &__wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0px -15px;
+        }
+        &__column{
+            padding: 0px 15px;
+        }
+    }
+}
 
 @media (max-width: 479px){
     .menu__link { 
@@ -270,6 +314,14 @@
 }
     &__button {
         flex: 1 1 100%;
+    }
+    &__wrapper{
+        padding: 120px 0px 170px 0px;
+    }
+    .services{
+        &__item {
+            padding: 25px;
+        }
     }
 }
 }
