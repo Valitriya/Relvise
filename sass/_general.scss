@@ -163,17 +163,87 @@
     }
     &__wrapper{
         display: flex;
-        margin: 0px -15px;
+        flex-wrap: wrap;
+        margin: 0px -15px -30px;
     }
     &__column{
-        margin: 0px 15px;
+        padding: 0px 15px;
         flex: 0 1 25%;
+        margin: 0px 0px 30px 0px;
     }
     &__item{
         background-color: #fff;
-        padding: 30px 40px;
+        padding: 30px;
         text-align: center;
-
+        font-weight: 700;
+        & > *:not(:last-child){
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    &__value{
+        font-size: 40px;
+        line-height: 142%;
+    }
+    &__text{
+        letter-spacing: 0.1px;
+        color: $text-color;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    &__icon{
+        height: 48px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+.practice {
+    padding: 125px 0px 80px 0px;
+    &__header{
+        margin: 0px 0px 45px 0px;
+    }
+    &__wrapper{
+        margin: 0px -20px -30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__column{
+        padding: 0px 20px;
+        margin: 0px 0px 30px 0px;
+        flex: 0 1 25%;
+    }
+}
+.item-practice {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &__content{
+        padding: 30px;
+        flex: 1 1 auto;
+    }
+    &__link{
+        color: inherit;
+        display: inline-block;
+        &:not(:last-child){
+            margin: 0px 0px 15px 0px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__title{
+        letter-spacing: 0.1px;
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 700;
+    }
+    &__text{
+        color: $text-color;
+        line-height: 142%;
+    }
+    &__image{
+        padding: 0px 0px 60% 0px;
     }
 }
 
@@ -189,7 +259,19 @@
        object-position: right;
     }
 }
-   
+
+@media (max-width: 1035px) {
+    .advantages{
+        &__column{
+            flex: 0 1 50%;
+        }
+    }
+    .practice {
+        &__column{
+            flex: 0 1 50%;
+        }
+    }
+}
 @media (max-width: 992px){
     .menu__link{
     color: #201f1f;
@@ -218,6 +300,17 @@
                 flex: 1 1 100%;
             }
         }
+    }
+    .header-block{
+        &__title{
+            font-size: 35px;
+        }
+    }
+    .advantages{
+        padding: 50px 0px;
+    }
+    .practice{
+        padding: 40px 0px 80px 0px; 
     }
 }
    
@@ -286,8 +379,29 @@
             }
         }
     }
+    .header-block{
+        &__title{
+            font-size: 30px;
+        }
+    }
+    .advantages{
+        padding: 40px 0px;
+        &__header{
+            margin: 0px 0px 35px 0px; 
+        } 
+    }
+    .practice{
+        padding: 0px 0px 40px 0px; 
+    }
 }
 
+@media (max-width: 630px){
+.practice{
+    &__column{
+        flex: 0 1 100%;
+    }
+}
+}
 @media (min-width: 670px){
     .services{
         &__wrapper{
@@ -301,6 +415,13 @@
     }
 }
 
+@media (max-width: 560px){
+    .advantages{
+        &__column{
+            flex: 0 1 100%;
+        }
+    }
+}
 @media (max-width: 479px){
     .menu__link { 
         font-size: 18px;
