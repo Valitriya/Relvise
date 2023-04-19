@@ -386,7 +386,7 @@
     }
   
 }
-.getintoch{
+.getintouch{
     padding: 80px 0px 148px 0px;
     &__header{
         margin: 0px 0px 80px 0px;
@@ -398,7 +398,7 @@
         flex: 0 1 33.333%;
     }
 }
-.item-getintoch{
+.item-getintouch{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,13 +414,13 @@
         transform: scale(1.1);
         transition: 0.6s all;
     }
-    &:hover .btn_getintoach{
+    &:hover .btn_getintouch{
         border: 1px solid #fff;
         color: #fff;
         background-color: $main-color;
         transition: 0.6s all;
     }
-    &:hover .item-getintoch__icon-svg path {
+    &:hover .item-getintouch__icon-svg path {
         fill: #fff;
         transition: 0.6s all;
     }
@@ -444,7 +444,7 @@
         font-size: 16px;
         line-height: 150%;
     }
-    .btn_getintoach{
+    .btn_getintouch{
         background-color: transparent;
         color: $main-color;
         border: 1px solid $main-color;
@@ -453,6 +453,38 @@
         line-height: 142%;
         padding: 5px 20px;
         font-weight: 600;
+    }
+}
+
+.contact {
+    background-color: #fff;
+    padding: 42px 0px;
+    &__content{
+        padding: 0px 0px 20px 0px;
+    }
+    &__title{
+        font-weight: 700;
+        letter-spacing: 0.1px;
+        font-size: 24px;
+        line-height: 133%;
+        &:not(:last-child){
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    &__text{
+        color: $text-color;
+        line-height: 142%;
+    }
+    .btn_contact{
+        min-height: 58px;
+        border-radius: 5px;
+        &:hover{
+            color: $second-color;
+            border: 1px solid $second-color;
+            background-color: transparent;
+            transition: 0.6s all;
+            
+        }
     }
 }
 
@@ -465,7 +497,7 @@
     }
 }
 @media(min-width: 992px){
-    .getintoch{
+    .getintouch{
         &__items{
             margin: 0;
             display: flex;
@@ -473,6 +505,19 @@
             justify-content: center;
         }
     }
+}
+@media(min-width: 767px){
+    .contact{
+        &__wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__content{
+            padding: 0px 20px 0px 0px;
+        }
+    }
+        
 }
 @media(min-width: 810px){
     .subscribe{
@@ -605,6 +650,12 @@
     .practice{
         padding: 40px 0px 80px 0px; 
     }
+    .getintouch{
+        padding: 50px 0px;
+        &__header{
+            margin: 0px 0px 50px 0px;
+        }
+    }
 }
 @media (max-width: 767px){
     .header {
@@ -701,6 +752,11 @@
     }
     .clients{
         padding: 50px 0;
+    }
+    .getintouch{
+        &__header{
+            margin: 0px 0px 30px 0px;
+        }
     }
 }
 @media (max-width: 630px){
